@@ -1,0 +1,24 @@
+<div class="header">
+  <div class="container">
+    <img src="http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/logo-1tm.svg" width="80">
+    <h1>Book Database</h1>
+  </div>
+</div>
+
+<div>
+  <div class="">
+    <div class="cards row">
+    	<% @books.each do |t| %>
+      <div class="card col-xs-4" style="color:black;">
+        <h2><%= t.title %></h2>
+        <p><%= t.author %></p>
+        <p><%= t.description %></p>
+        <p><%= t.publisher %></p>
+        <p>Weeks on list: <%= t.weeks_on_list %></p>
+        <p>Rank this week: <%= t.rank_this_week %></p>
+        <%= link_to 'See all Editorial Reviews', t %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
